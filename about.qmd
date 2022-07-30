@@ -1,7 +1,7 @@
 ---
 title: "About Me"
 image: "files/profile-smaller-2019.png"
-include-in-header: files/logo-regular.html
+include-in-header: files/logo-small.html
 about: 
   template: jolla
   image-width: 45%

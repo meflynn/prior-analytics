@@ -1,5 +1,6 @@
 ---
 title: Portfolio
+include-in-header: files/logo-small.html
 listing:
   contents: portfolio
   type: grid
