@@ -1,0 +1,16 @@
+{
+  "hash": "86ff9be9dd8723f0265bed62501acfba",
+  "result": {
+    "markdown": "---\ntitle: Data Visualization\nimage: \"/files/images/sample-figure.jpg\"\n---\n\n\nCommunicating information clearly and effectively is a critical part of any industry. One of my interests is using data visualization to help clients more effectively understand their data, and to also help them to more effectively communicate with their stakeholders. \n\nBelow you can find examples of data visualization projects that I've worked on over the years.\n\n\n::: {.cell}\n::: {.cell-output-display}\n![](dataviz_files/figure-html/example-plot-1.png){width=672}\n:::\n:::\n",
+    "supporting": [
+      "dataviz_files"
+    ],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

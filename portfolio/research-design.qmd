@@ -1,0 +1,30 @@
+---
+title: Research Design
+image: "/files/images/sample-dag.png"
+---
+
+Analyzing data is important, but getting the most out of your data also means asking the right questions and designing your analysis in a way that will give you the information you need to make the best decisions. This requires engaging with stakeholders and subject experts to understand what clients want to know and how best to get answers to the questions that matter.
+
+```{r, include=FALSE, echo=FALSE, warning=FALSE}
+library(dagitty)
+library(ggdag)
+library(tidyverse)
+
+dag <- dagitty::dagitty('dag{
+                        X -> Y
+                        Z -> X
+                        Z -> Y
+                        A -> Z
+                        A -> X
+                        X [exposure]
+                        Y [outcome]
+                        Z [unobserved]
+                        }')
+
+ggdag(dag) +
+  theme_dag() +
+  scale_color_manual(values = c("green", "blue", "blue"))
+
+ggsave(here::here("files/images/sample-dag.png"))
+```
+

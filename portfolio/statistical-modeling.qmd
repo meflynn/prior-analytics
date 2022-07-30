@@ -1,0 +1,6 @@
+---
+title: Statistical Modeling
+image: "/files/images/stats-banner.png"
+---
+
+The world is a complex place, and there are a number of factors that affect the outcomes that we care about. I have extensive experience using a wide range of statistical models in applied research to address these sorts of issues. Drawing on this background I hope to help you use data to better understand the factors that shape the outcomes you care about.

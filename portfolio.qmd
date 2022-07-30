@@ -1,0 +1,8 @@
+---
+title: Portfolio
+listing:
+  contents: portfolio
+  type: grid
+---
+
+Below you can find pages that provide examples of the different kind of work I've done over the years. I hope these can provide you with a sense of my abilities as well as provide inspiration for the kind of word you might like for your own purposes.

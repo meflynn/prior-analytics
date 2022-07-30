@@ -1,0 +1,10 @@
+[
+  {
+    "listing": "/portfolio.html",
+    "items": [
+      "/portfolio/dataviz.html",
+      "/portfolio/research-design.html",
+      "/portfolio/statistical-modeling.html"
+    ]
+  }
+]

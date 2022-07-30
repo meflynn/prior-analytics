@@ -1,0 +1,42 @@
+---
+title: "About Me"
+image: "files/profile-fullsize-2019.png"
+include-in-header: files/logo-regular.html
+about: 
+  template: jolla
+  image-width: 45%
+  image-shape: round
+  links: 
+    - icon: twitter
+      text: Twitter
+      href: https://twitter.com/flynnpolsci
+    - icon: github
+      text: Github
+      href: https://github.com/meflynn
+---
+
+> Michael Flynn is the principal analyst at Prior Analytics. He has 15 years of experience working as a researcher, applied statistician, and data analyst. He enjoys working with others to brainstorm new ideas and to help them solve problems. You can find a copy of his CV [here](https://m-flynn.com/files/flynn-cv.pdf).
+
+> During my time as a researcher I've dealt with many different kinds of research problems, and my work requires that I be able to connect technical and specialized research skills with communication skills that make my research accessible to a general audience—whether that be grant funding agencies or policymakers. My goal is to bring the skills that I've developed over my career to assist others in their own projects.
+
+:::{#hero-heading}
+
+## Education
+
+Ph.D. Political Science |
+Binghamton University, New York | 2013
+
+M.A. Political Science | 
+Binghamton University, New York | 2009
+
+B.A History, B.A. Politics | SUNY Potsdam, New York | 2006
+
+## Experience
+
+Kansas State University | Associate Professor of Political Science | 2018-Present
+
+Kansas State University | Assistant Professor of Political Science | 2014-2018
+
+University of Alabama | Postdoctoral Fellow | 2013-2014
+:::
+

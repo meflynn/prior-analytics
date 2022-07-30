@@ -1,0 +1,31 @@
+project:
+  type: website
+
+website:
+  title: "Prior Analytics"
+  favicon: "/files/prior-analytics-logo.png"
+  twitter-card:
+    image: "/files/prior-analytics-logo.png"
+  body-footer: files/footer-copyright.html
+  navbar:
+    background: black
+    right:
+      - href: index.qmd
+        text: Home
+      - href: about.qmd
+        text: About
+      - href: portfolio.qmd
+        text: Portfolio
+      - icon: github
+        href: https://github.com/meflynn
+      - icon: twitter
+        href: https://twitter.com/flynnpolsci
+
+format:
+  html:
+    theme: cosmo
+    mainfont: roboto-light
+    css: styles.css
+
+editor: source
+

@@ -1,0 +1,16 @@
+{
+  "hash": "ce1aac0cb22011d4e386d3e8bc6de057",
+  "result": {
+    "markdown": "---\ntitle: Research Design\nimage: \"/files/images/sample-dag.png\"\n---\n\n\nAnalyzing data is important, but getting the most out of your data also means asking the right questions and designing your analysis in a way that will give you the information you need to make the best decisions. This requires engaging with stakeholders and subject experts to understand what clients want to know and how best to get answers to the questions that matter.\n\n\n\n",
+    "supporting": [
+      "research-design_files"
+    ],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

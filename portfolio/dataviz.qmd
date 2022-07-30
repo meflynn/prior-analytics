@@ -1,0 +1,21 @@
+---
+title: Data Visualization
+image: "/files/images/sample-figure.jpg"
+---
+
+Communicating information clearly and effectively is a critical part of any industry. One of my interests is using data visualization to help clients more effectively understand their data, and to also help them to more effectively communicate with their stakeholders. 
+
+Below you can find examples of data visualization projects that I've worked on over the years.
+
+```{r example-plot, echo=FALSE, message=FALSE, warning=FALSE}
+library(tidyverse)
+
+data <- tibble::tibble(x = rnorm(1e3, 0, 3),
+                       y = 2 * x^3)
+
+ggplot(data, aes(x = x, y = y, color = abs(x), size = abs(-y))) +
+  geom_point() +
+  theme_minimal()
+
+ggsave(here::here("files/images/sample-figure.jpg"))
+```
