@@ -1,0 +1,11 @@
+---
+title: "Contact Me"
+include-in-header: files/logo-small.html
+---
+
+If you'd like to talk don't hesitate to email me. I will respond to you as soon as possible. I look forward to helping you with your company's projects!
+
+Email me at [michaelflynn@prioranalytics.net](mailto:michaelflynn@prioranalytics.net)
+
+Prior Analytics, LLC  
+Manhattan, KS 66502

@@ -18,6 +18,8 @@ website:
         text: About
       - href: portfolio.qmd
         text: Portfolio
+      - href: contact.qmd
+        text: Contact
       - icon: github
         href: https://github.com/meflynn
       - icon: twitter

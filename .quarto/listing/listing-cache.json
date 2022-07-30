@@ -1,5 +1,8 @@
 {
   "listingMap": {
+    "portfolio/research-design.qmd": [
+      "projects"
+    ],
     "portfolio.qmd": [
       "portfolio"
     ]

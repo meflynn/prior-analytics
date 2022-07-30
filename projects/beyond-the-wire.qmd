@@ -1,0 +1,16 @@
+---
+title: "Beyond the Wire: US Military Deployments and Host Country Public Opinion"
+---
+
+## Question
+
+What do hose country populations think about the US military personnel stationed within their country? 
+
+## Methods
+
+Drawing on a $1.2 million USD Department of Defense Minerva Research Initiative Grant my research team adopted a mixed methods approach to answering this question. These approaches included:
+
+- Surveying over 42,000 people across 14 countries and three years
+- Using advanced Bayesian modeling techniques to assess the correlates of attitudes towards various US actors
+- Use predictive modeling to identify key clusters of variables that shape individual attitudes
+- Use causal inference techniques to assess the causal effect of key variables
