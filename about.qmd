@@ -1,6 +1,6 @@
 ---
 title: "About Me"
-image: "files/profile-fullsize-2019.png"
+image: "files/profile-smaller-2019.png"
 include-in-header: files/logo-regular.html
 about: 
   template: jolla
