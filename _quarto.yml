@@ -4,6 +4,7 @@ project:
 website:
   title: "Prior Analytics"
   favicon: "/files/prior-analytics-logo.png"
+  google-analytics: "G-8ZCZ67224S"
   twitter-card:
     image: "/files/prior-analytics-logo.png"
   body-footer: files/footer-copyright.html
