@@ -3,7 +3,7 @@ project:
 
 website:
   title: "Prior Analytics"
-  favicon: "/files/prior-analytics-logo.png"
+  favicon: "/files/prior-analytics-logo-small.png"
   google-analytics:
     tracking-id: "G-8ZCZ67224S"
   twitter-card:
