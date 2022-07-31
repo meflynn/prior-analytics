@@ -3,6 +3,10 @@
 /* Import fonts */
 @import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@100&family=Oswald:wght@200;400&display=swap');
 
+* {
+    font-family: roboto;
+  }
+
 .navbar{
   font-family: roboto;
   font-weight: 700;
