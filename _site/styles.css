@@ -3,18 +3,19 @@
 /* Import fonts */
 @import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@100&family=Oswald:wght@200;400&display=swap');
 
-* {
+body {
     font-family: roboto;
     font-weight: 300;
   }
 
 h1 {
-  font-weight: 300;
+  font-family: roboto;
+  font-weight: 400;
 }
 
 .navbar{
   font-family: roboto;
-  font-weight: 700;
+  font-weight: 600;
 }
 
 .blockquote{
@@ -41,7 +42,7 @@ li::marker{
 }
 
 .logo-small img {
-  max-height: 10em;
+  height: 10em;
   margin: auto;
   display: block;
 }

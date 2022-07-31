@@ -4,7 +4,7 @@ image: "files/profile-smaller-2019.png"
 include-in-header: files/logo-small.html
 about: 
   template: jolla
-  image-width: 40%
+  image-width: 35%
   image-shape: round
   links: 
     - icon: twitter
