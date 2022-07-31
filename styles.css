@@ -3,7 +3,7 @@
 /* Import fonts */
 @import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@100&family=Oswald:wght@200;400&display=swap');
 
-#text {
+body {
     font-family: roboto;
     font-weight: 200;
     color: black;
