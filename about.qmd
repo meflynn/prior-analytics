@@ -15,9 +15,9 @@ about:
       href: https://github.com/meflynn
 ---
 
-> Michael Flynn is the principal analyst at Prior Analytics. He has 15 years of experience working as a researcher, applied statistician, and data analyst. He enjoys working with others to brainstorm new ideas and to help them solve problems. You can find a copy of his CV [here](https://m-flynn.com/files/flynn-cv.pdf).
+> My name is Michael Flynn and I am the principal and chief analyst at Prior Analytics. I have 15 years of experience working as a researcher, applied statistician, and data analyst. I enjoy working with other people to brainstorm new ideas and to help them solve problems. You can find a copy of my academic CV [here](https://m-flynn.com/files/flynn-cv.pdf).
 
-> During my time as a researcher I've dealt with many different kinds of research problems, and my work requires that I be able to connect technical and specialized research skills with communication skills that make my research accessible to a general audience—whether that be grant funding agencies or policymakers. My goal is to bring the skills that I've developed over my career to assist others in their own projects.
+> During my time as a researcher I've dealt with many different kinds of questions and research problems, and my work requires that I be able to connect technical and specialized research skills with communication skills that make my research accessible to a general audience—whether that be grant funding agencies or policymakers. My goal is to bring the skills that I've developed over my career to assist others in their own projects.
 
 :::{#hero-heading}
 
