@@ -2,7 +2,7 @@ project:
   type: website
 
 website:
-  title: "Prior Analytics"
+  title: "Prior Analytics, LLC"
   favicon: "/files/prior-analytics-logo-small.png"
   google-analytics:
     tracking-id: "G-8ZCZ67224S"
