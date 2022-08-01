@@ -5,7 +5,7 @@ include-in-header: files/logo-regular.html
 
 Welcome to **Prior Analytics**! My name is Michael Flynn and I offer independent statistical and data analysis consulting services. 
 
-# What do I offer?
+# Services
 
 Whether it’s private businesses, non-profits, or government agencies, people often find themselves trying to solve complex problems. Increasingly these challenges involve wrangling large amounts of data as businesses try to better understand these problems and identify possible solutions. 
 
