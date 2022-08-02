@@ -81,7 +81,7 @@
     "href": "portfolio/dataviz.html#examples",
     "title": "Data Visualization",
     "section": "Examples",
-    "text": "Examples\nDemonstrating concepts of accuracy and validity for measurement issues.\n\n\n\n\n\nMapping the sulfate levels in Adirondack Lakes (New York) over time.\n\n\n\n\n\nHere are some cross sectional time series data on Adirondack Lake sulfate levels over time.\n\n\n\n\n\nMapping temperature anomalies over time.\n\n\n\n\n\nLonger term ice core temperature data and CO2 levels."
+    "text": "Examples\nDemonstrating concepts of accuracy and validity for measurement issues.\n\n\n\n\n\nMapping the sulfate levels in Adirondack Lakes (New York) over time.\n\n\n\n\n\nHere are some cross sectional time series data on Adirondack Lake sulfate levels over time.\n\n\n\n\n\nMapping temperature anomalies over time.\n\n\n\n\n\nLonger term ice core temperature data and CO2 levels.\n\n\n\n\n\nYou can even make art with cool packages like {aRtsy}!"
   },
   {
     "objectID": "files/site-header.html",

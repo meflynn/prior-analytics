@@ -11,6 +11,7 @@ library(patchwork)
 library(here)
 library(lubridate)
 library(scales)
+library(aRtsy)
 
 basesize <-  11
 
@@ -295,15 +296,17 @@ ggplot() +
 
 ```
 
+
+You can even make art with cool packages like `{aRtsy}`!
 ```{r example-plot, echo=FALSE, message=FALSE, warning=FALSE}
-library(tidyverse)
 
-data <- tibble::tibble(x = rnorm(1e3, 0, 3),
-                       y = 2 * x^3)
-
-ggplot(data, aes(x = x, y = y, color = abs(x), size = abs(-y))) +
-  geom_point() +
-  theme_minimal()
+set.seed(66502)
+canvas_collatz(colors = colorPalette("vrolik5"),
+               n = 200,
+               angle.even = 0.175,
+               angle.odd = 0.815,
+               side = FALSE)
+# see ?canvas_collatz for more input parameters of this function
 
 ggsave(here::here("files/images/sample-figure.jpg"))
 ```
