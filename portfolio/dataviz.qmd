@@ -2,10 +2,298 @@
 title: Data Visualization
 image: "/files/images/sample-figure.jpg"
 ---
+```{r setup, include = FALSE, warning = FALSE, message=FALSE}
 
+library(tidyverse)
+library(ggforce)
+library(ggtext)
+library(patchwork)
+library(here)
+library(lubridate)
+library(scales)
+
+basesize <-  11
+
+# Regular plot theme
+theme_flynn <- function(){ 
+  
+  theme_linedraw(base_size = basesize, base_family = "oswald") %+replace% 
+    
+    theme(plot.title = element_text(face = "bold", size = basesize * 1.3, hjust = 0, margin = margin(t = 0, b = 0.2, l = 0, r = 0, unit = "cm")),
+          plot.subtitle = element_text(size = basesize, hjust = 0, margin = margin(t = 0.0, b = 0.2, unit = "cm")),
+          plot.caption = element_text(face = "italic", size = basesize * 0.6, hjust = 1, lineheight = 1, margin = margin(t = 0.2, unit = "cm")),
+          panel.border = element_rect(fill = NA, size = 0.2),
+          strip.background = element_rect(fill = "gray80", color = "black", size = 0.2),
+          strip.text = element_text(size = basesize, color = "black", face = "bold", margin = margin(t = 0.2, b = 0.2, l = 0.2, r = 0.2, unit = "cm")),
+          panel.background = element_rect(size = 0.2),
+          panel.grid.major = element_line(color = "gray70", size = 0.15),
+          panel.grid.minor = element_line(color = "gray90", size = 0.1),
+          axis.title = element_text(face = "bold", size = basesize),
+          axis.title.y = element_text(angle = 90, margin = margin(t = 0, r = 0.2, b = 0, l = 0, unit = "cm")),
+          axis.title.x = element_text(margin = margin(t = 0.2, r = 0, b = 0, l = 0, unit = "cm")),
+          axis.ticks = element_line(size = 0.1),
+          axis.ticks.length = unit(0.1, "cm"),
+          legend.title = element_text(size = basesize, face = "bold", hjust = 0, margin = margin(t = 0, b = 0, l = 0, r = 0, unit = "cm")),
+          legend.text = element_text(size = basesize, hjust = 0, margin = margin(t = 0, b = 0, l = 0, r = 0, unit = "cm")),
+          legend.box.spacing =  unit(0.2, "cm"),
+          plot.margin = margin(0.3, 0.3, 0.3, 0.3, unit = "cm"))
+}
+
+showtext::showtext_auto()
+
+```
 Communicating information clearly and effectively is a critical part of any industry. One of my interests is using data visualization to help clients more effectively understand their data, and to also help them to more effectively communicate with their stakeholders. 
 
 Below you can find examples of data visualization projects that I've worked on over the years.
+
+## Examples
+
+Demonstrating concepts of accuracy and validity for measurement issues.
+
+```{r, echo = FALSE, warning=FALSE,  message=FALSE}
+
+N <- 1e2
+
+circles <- data.frame(
+  x0 = rep(0, 5),
+  y0 = rep(0, 5),
+  r = seq(0.1, 1, length.out = 5)
+)
+
+data.av <- tibble(x = rnorm(N, 0, 0.1),
+                  y = rnorm(N, 0, 0.1),
+                  group = "Valid, Reliable") 
+
+data.anv <- tibble(x = rnorm(N, 0.5, 0.1),
+                  y = rnorm(N, 0.5, 0.1),
+                  group = "Not Valid, Reliable") 
+
+data.nav <- tibble(x = rnorm(N, 0, 0.25),
+                   y = rnorm(N, 0, 0.25),
+                   group = "Valid, Not Reliable") 
+
+data.nanv <- tibble(x = rnorm(N, -0.5, 0.25),
+                   y = rnorm(N, -0.6, 0.25),
+                   group = "Not Valid, Not Reliable") 
+
+
+
+plot.av <- ggplot() +
+  geom_circle(data = circles, aes(x0 = x0, y0 = y0, r = r, fill = r), alpha = 0.4, show.legend = FALSE) +
+  geom_point(data = data.av, aes(x = x, y = y), fill = "maroon", alpha = .8, size = 2, pch = 21) +
+  coord_fixed() +
+  theme_void() +
+  theme(title = element_markdown(size = 12, face = "bold")) +
+  scale_x_continuous(limits = c(-1.25, 1.25)) +
+  scale_y_continuous(limits = c(-1.25, 1.25)) +
+  labs(title = "Valid, Reliable")
+
+
+plot.anv <- ggplot() +
+  geom_circle(data = circles, aes(x0 = x0, y0 = y0, r = r, fill = r), alpha = 0.4, show.legend = FALSE) +
+  geom_point(data = data.anv, aes(x = x, y = y), fill = "maroon", alpha = .8, size = 2, pch = 21) +
+  coord_fixed() +
+  theme_void() +
+  theme(title = element_markdown(size = 12, face = "bold")) +
+  scale_x_continuous(limits = c(-1.25, 1.25)) +
+  scale_y_continuous(limits = c(-1.25, 1.25)) +
+  labs(title = "Not Valid, Reliable")
+
+plot.nav <- ggplot() +
+  geom_circle(data = circles, aes(x0 = x0, y0 = y0, r = r, fill = r), alpha = 0.4, show.legend = FALSE) +
+  geom_point(data = data.nav, aes(x = x, y = y), fill = "maroon", alpha = .8, size = 2, pch = 21) +
+  coord_fixed() +
+  theme_void() +
+  theme(title = element_markdown(size = 12, face = "bold")) +
+  scale_x_continuous(limits = c(-1.25, 1.25)) +
+  scale_y_continuous(limits = c(-1.25, 1.25)) +
+  labs(title = "Valid, Not Reliable")
+
+
+plot.nanv <- ggplot() +
+  geom_circle(data = circles, aes(x0 = x0, y0 = y0, r = r, fill = r), alpha = 0.4, show.legend = FALSE) +
+  geom_point(data = data.nanv, aes(x = x, y = y), fill = "maroon", alpha = .8, size = 2, pch = 21) +
+  coord_fixed() +
+  theme_void() +
+  theme(title = element_markdown(size = 12, face = "bold")) +
+  scale_x_continuous(limits = c(-1.25, 1.25)) +
+  scale_y_continuous(limits = c(-1.25, 1.25)) +
+  labs(title = "Not Valid, Not Reliable")
+
+plot.com <- wrap_plots(plot.av, plot.nav, plot.anv, plot.nanv)
+
+plot.com
+
+```
+
+
+Mapping the sulfate levels in Adirondack Lakes (New York) over time.
+
+```{r Adirondack Sulfate Levels Map, echo=FALSE, warning=FALSE, message=FALSE}
+
+# Mapping sulfate levels in New York State
+lake.map <- read.csv(here::here("../../Data Files/Adirondack Lake Survey/ALS_SUMMER_SURFACE_CHEM_1984-87.csv"), skip = 3, stringsAsFactors = FALSE)
+
+                     colnames(lake.map)[3] <- "Sample Date"
+colnames(lake.map)[6] <- "Sulfate"
+colnames(lake.map)[4] <- "long"
+colnames(lake.map)[5] <- "lat"
+
+lake.map <- lake.map %>%
+  group_by(PONDNAME, POND) %>% 
+  dplyr::summarise(sulfate = mean(`Sulfate`, na.rm = TRUE), 
+            lat = mean(lat, na.rm = TRUE), 
+            long = mean(-long, na.rm = TRUE)) 
+
+
+map <- map_data("state", region = "new york")
+
+
+ggplot() +
+  geom_polygon(data = map, aes(x = long, y = lat, group = group), fill = "gray60") +
+  geom_point(data = lake.map, aes(x = long, y = lat, colour = sulfate), alpha = .5) +
+  theme_void() +
+  theme(title = element_text(face = "bold", size = 14, family = "Oswald"),
+        legend.title = element_text(face = "bold"), 
+        legend.position = c(1.0, 0.5)) +
+  coord_quickmap() +
+  scale_colour_distiller(type = "seq", palette = "Spectral", direction = -1, limits = c(0,25)) +
+  labs(title = "Sulfate levels in Adirondack lakes, 1984-1987",
+       colour = "Sulfate Level \n(mg/L)",
+       caption = "Data collected from the Adirondack Lake Survey Corporation")
+```
+
+
+Here are some cross sectional time series data on Adirondack Lake sulfate levels over time.
+
+```{r Adirondack suflate levels over time, echo=FALSE,warning=FALSE,message=FALSE}
+
+# Note I had to rename a complicated column here. Basic rename didn't work, had to use col number.
+data <- read_csv(here::here("../../Data Files/Adirondack Lake Survey/2016-1992_ALTM_WEB.csv"), skip = 11)
+colnames(data)[6] <- "Sample Date"
+colnames(data)[8] <- "Sulfate"
+colnames(data)[4] <- "Station"
+colnames(data)[5] <- "Depth"
+
+# The date conversation is tricky here
+# The format part has to match the existing format from the imported data (here it's a ".")
+# The sep line tells it what to convert the separator to
+data <- data %>% 
+  subset(`Station` == 1) %>% 
+  mutate(`Sample Date` = as.Date(`Sample Date`, format = "%Y.%m.%d", sep = "-", origin = "1970-01-01"))
+
+data.1 <- data %>% 
+  subset(select = c("Sample Date", "Sulfate"))
+
+data.2 <- read_csv(here::here("../../Data Files/Adirondack Lake Survey/ALS_SUMMER_SURFACE_CHEM_1984-87.csv"), skip = 3)
+colnames(data.2)[3] <- "Sample Date"
+colnames(data.2)[6] <- "Sulfate"
+colnames(data.2)[4] <- "long"
+colnames(data.2)[5] <- "lat"
+data.2 <- data.2 %>% 
+  subset(select = c("Sample Date", "Sulfate")) %>% 
+  mutate(`Sample Date` = as.Date(`Sample Date`, format = "%m/%d/%y", sep = "-", origin = "1970-01-01"))
+
+data.combined <- rbind(data.1, data.2)
+
+
+# Combined Point data
+ggplot(data = data.combined, aes(x = `Sample Date`, y = Sulfate)) +
+  geom_point(alpha = .2) +
+  geom_smooth(method = "lm", formula = y ~ splines::bs(x, 3), se = FALSE) +
+  geom_vline(xintercept = as.Date("1990-11-15"), colour = "red") +
+  annotate("text", x = as.Date("1992-01-01"), y = 16, label = "1990 Clean Air Act \nammendments signed", hjust = 0) +
+  theme_flynn() +
+  labs(title = "Sulfate levels in Adirondack lakes, 1984-2016",
+       subtitle = "Public policy can help to mitigate or even reverse problems resulting from pollution",
+       y = "Sulfate Concentration (mg/L)",
+       caption = "Data obtained from the Adirondack Lakes Survey Corporation: \n http://www.adirondacklakessurvey.org/data/complete/1992-2016_ALTM_Chemistry.zip \nhttp://www.adirondacklakessurvey.org/data/sumsurf/sumsurf_chem/ALS_Summer_surface_chem_1984-87.zip \nGraph depicts surface sample values only.") +
+  scale_x_date(breaks = seq(as.Date("1984-01-01"), as.Date("2017-01-01"), by = "4 years"), 
+                            labels = date_format("%b %Y"),
+               limits = c(as.Date("1984-01-01"), as.Date("2017-01-01")))
+
+
+```
+
+
+Mapping temperature anomalies over time.
+
+```{r tempoerature anomalies, warning=FALSE, echo=FALSE, message=FALSE}
+
+data.temp.anom <- read.csv(here::here("../../Data Files/NOAA Data/1880-2016.csv"), skip = 3) %>% 
+  mutate(group = ifelse(Value > 0, "Positive", "Negative"))
+
+ggplot(data = data.temp.anom, aes(x = Year, y = Value)) +
+  geom_hline(yintercept = 0, colour = "red") +
+  geom_line() +
+  geom_smooth(span = 1) +
+  theme_flynn() +
+  scale_x_continuous(breaks = seq(1880, 2020, 20)) +
+  scale_y_continuous(breaks = seq(-0.5, 1, .25)) +
+  labs(title = "Global surface and ocean temperature anomalies, 1880-2016",
+       subtitle = "Temperature anomalies have been consistently positive since the 1980s",
+       caption = "Anomalies relative to the average for the 1900-2000 period average.
+       Data obtained from: NOAA National Centers for Environmental Information, Climate at a Glance: Global Time Series, published November 2016
+       Retrieved on December 1, 2016 from http://www.ncdc.noaa.gov/cag/")
+```
+
+
+Longer term ice core temperature data and CO2 levels.
+
+```{r long term ice core and temp data, warning=FALSE, message=FALSE, echo=FALSE}
+
+data.temp.anom <- read_csv(here("../../Data Files/NOAA Data/1880-2016.csv"), skip = 3) %>% 
+  mutate(group = ifelse(Value > 0, "Positive", "Negative"))
+
+data.temp <- readxl::read_xls(here("../../Data Files/US Government Files/EPA/vostok.1999.temp.dat.xls"), skip = 0)
+colnames(data.temp)[2] <- "time"
+colnames(data.temp)[4] <- "temp"
+data.temp <- data.temp %>% 
+  mutate(time = as.numeric(0 - time),
+         value = as.numeric(temp),
+         group = as.factor("Temp")) %>% 
+  subset(select = c("time", "value", "group"))
+
+
+# Time variable had to be converted from factor to numeric
+# Have to use paste function
+data.ice <- read_csv(here("../../Data Files/US Government Files/EPA/ghg-concentrations_fig-1.csv"), skip = 7)
+colnames(data.ice)[1] <- "time"
+data.ice <- data.ice %>% 
+  mutate(co2 = apply(., 1, max, na.rm = TRUE),
+         time = as.numeric(paste(time)),
+         value = as.numeric(co2),
+         group = as.factor("CO2")) %>% 
+  subset(select = c("time", "group", "value"))
+
+data.combined <- rbind(data.ice, data.temp)
+
+
+# The second scale was tricky. You have to reverse what you do for the rescaling in the geom_line section
+# Also note that, since you multiply by 10 BEFORE adding 250, you have to divide by 10 and subtract 25
+ggplot() +
+  geom_line(data = subset(data.combined, group == "CO2"), aes(x = time, y = value, group = group, colour = group)) +
+  geom_line(data = subset(data.combined, group == "Temp"), aes(x = time, y = ((value * 10) + 250), group = group, colour = group), alpha = .6) +
+  geom_hline(yintercept = 250) +
+  scale_y_continuous(breaks = seq(150, 400, 50), limits = c(150, 400), sec.axis = sec_axis(~./10 - 25, name = "Temperature Anomaly (°C)", breaks = seq(-10, 16, 2))) +
+  scale_x_continuous(breaks = seq(-800000, 0, 100000), labels = scales::comma) +
+  theme_flynn() +
+  theme(legend.position = "bottom",
+        panel.grid.major = element_line(colour = "gray70", size = .1),
+        panel.grid.minor = element_line(colour = "gray80", size = .1)) +
+  scale_color_brewer(palette = "Set1") +
+  labs(colour = "Measure",
+       title = "Global temperature anamoly and atmospheric CO2 levels",
+       subtitle = "CO2 levels and temperature anomalies track one another closely over the last 400,000 years",
+       y = "CO2 (ppm)",
+       x = "Time",
+       caption = "Ice core temperature data obtained from:
+       http://cdiac.ess-dive.lbl.gov/ftp/trends/temp/vostok/vostok.1999.temp.dat
+       CO2 data obtained from: https://www.epa.gov/sites/production/files/2016-08/ghg-concentrations_fig-1.csv
+       Note: Temperature data ends 2000 years prior to present day.") 
+
+
+```
 
 ```{r example-plot, echo=FALSE, message=FALSE, warning=FALSE}
 library(tidyverse)

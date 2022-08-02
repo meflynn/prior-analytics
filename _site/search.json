@@ -74,7 +74,14 @@
     "href": "portfolio/dataviz.html",
     "title": "Data Visualization",
     "section": "",
-    "text": "Below you can find examples of data visualization projects that I’ve worked on over the years.\n\n\n\n\n\n\n\n\nfiles/footer-copyright.html"
+    "text": "Communicating information clearly and effectively is a critical part of any industry. One of my interests is using data visualization to help clients more effectively understand their data, and to also help them to more effectively communicate with their stakeholders.\nBelow you can find examples of data visualization projects that I’ve worked on over the years.\nfiles/footer-copyright.html"
+  },
+  {
+    "objectID": "portfolio/dataviz.html#examples",
+    "href": "portfolio/dataviz.html#examples",
+    "title": "Data Visualization",
+    "section": "Examples",
+    "text": "Examples\nDemonstrating concepts of accuracy and validity for measurement issues.\n\n\n\n\n\nMapping the sulfate levels in Adirondack Lakes (New York) over time.\n\n\n\n\n\nHere are some cross sectional time series data on Adirondack Lake sulfate levels over time.\n\n\n\n\n\nMapping temperature anomalies over time.\n\n\n\n\n\nLonger term ice core temperature data and CO2 levels."
   },
   {
     "objectID": "files/site-header.html",
