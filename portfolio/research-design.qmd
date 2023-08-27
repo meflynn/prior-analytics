@@ -1,6 +1,6 @@
 ---
 title: Research Design
-include-in-header: files/logo-small.html
+#include-in-header: files/logo-small.html
 image: "/files/images/sample-dag.png"
 listing:
   contents: projects

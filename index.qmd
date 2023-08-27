@@ -7,32 +7,44 @@ Welcome to **Prior Analytics, LLC**! My name is Michael Flynn and I offer indepe
 
 # Services
 
-Whether it’s private businesses, non-profits, or government agencies, people often find themselves trying to solve complex problems. Increasingly these challenges involve wrangling large amounts of data as businesses try to better understand the challenges they face and identify possible solutions. 
+Whether it's private businesses, non-profits, or government agencies, people often find themselves trying to solve complex problems. Increasingly these challenges involve wrangling large amounts of data as businesses try to better understand the challenges they face and identify possible solutions.
 
-My specialization involves the use of statistical and computational research methods to help you at whatever stage of this process your organization may be in. Whether it's analyzing large amounts of data, developing effective data visualization tools, or helping you to figure out how to ask the right questions, I can assist you. 
+My specialization involves the use of statistical and computational research methods to help you at whatever stage of this process your organization may be in. Whether it's analyzing large amounts of data, developing effective data visualization tools, or helping you to figure out how to ask the right questions, I can assist you.
 
 Specifically, I offer the following types of services, including but not limited to:
 
-- Statistical analysis
-- Data analysis
-- Designing surveys or research projects
-- Data collection
-- Written reports
-- Public lectures and presentations
-- Private or organizational briefings
-
+-   Statistical analysis
+-   Data analysis
+-   Designing surveys or research projects
+-   Data collection
+-   Written reports
+-   Public lectures and presentations
+-   Private or organizational briefings
 
 # My approach
 
-I have 15 years of training and experience in the social sciences, blending advanced statistical techniques with a consistent focus on the substantive issues that matter to people. With these skills I can help you and your business adopt a data-driven approach to identify solutions to complex and challenging problems. 
+I have 15 years of training and experience in the social sciences, blending advanced statistical techniques with a consistent focus on the substantive issues that matter to people. With these skills I can help you and your business adopt a data-driven approach to identify solutions to complex and challenging problems.
 
-While others may have similar technical abilities, by background in political science means that whatever the statistical and computational methods I use, I will always maintain a focus on the substantive issues that matter, making sure you can easily identify the key takeaways and solutions that your organization cares about. 
+While others may have similar technical abilities, by background in political science means that whatever the statistical and computational methods I use, I will always maintain a focus on the substantive issues that matter, making sure you can easily identify the key takeaways and solutions that your organization cares about.
 
 No matter your needs, my approach always prioritizes developing a better understanding of the underlying patterns of human behavior, and I will provide you with clear and concise analyses that meet your needs.
 
+## Testimonials
 
-## Contact 
+:::::{#schafer .testimonial}
+:::{.testimonial-image}
+![](testimonials/schafer/schafer-image.jpeg)
+:::
+:::{.testimonial-title}
+Josie Gatti Schafer <br>
+Director, Center for Public Affairs Research <br>
+University of Nebraska Omaha
+:::
+I needed help with some data analysis that I had to present to some of my stakeholders. Mike was very easy to work with, and he did a great job communicating to understand what I needed. He gave me a lot of options and provided additional materials to help me present the results in a clear and concise way to my audience. His expertise added a great deal of value to the project.
+:::::
+
+## Contact
 
 If you'd like to talk more about your business' needs don't hesitate to email me. I will respond to you as soon as possible. I look forward to helping you with your company's projects!
 
-Email me at [michaelflynn@prioranalytics.net](mailto:michaelflynn@prioranalytics.net)
+Email me at [michaelflynn\@prioranalytics.net](mailto:michaelflynn@prioranalytics.net)

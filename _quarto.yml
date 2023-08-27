@@ -22,8 +22,8 @@ website:
         text: Contact
       - icon: github
         href: https://github.com/meflynn
-      - icon: twitter
-        href: https://twitter.com/flynnpolsci
+      - icon: linkedin
+        href: https://www.linkedin.com/company/prior-analytics-llc/
 
 format:
   html:
